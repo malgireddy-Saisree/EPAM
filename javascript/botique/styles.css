@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?fashion') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+}
+
+header {
+    padding: 20px;
+    font-size: 24px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.category {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.category:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+}

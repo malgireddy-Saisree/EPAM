@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rājasikam ārjana</title>
+    <style>
+        body {
+            margin: 0;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.6;
+        }
+
+        /* front-page */
+
+        .Front {
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('background-img.jpg');
+            /* background-size: cover; */
+            background-position: center;
+            height: 100vh;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Front page-->
+    <div class="Front">
+        <div>
+            <h1>Welcome to Rājasikam ārjana</h1>
+            <p>Experience the best Culinary Experience.</p>
+            <button>Reserve a Table</button>
+        </div>
+    </div>
+
+    <!-- Menu page-->
+    <div class="Menu">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <div class = "menu-item">
+                <img src = "Risotto.jpg" alt="Dish 1">
+                <h3>Risotto</h3>
+                <p>Creamy and rich in cheese, it is prepared with rice typical of northern areas, such as the Arborio,and cooked slowly in broth.</p>
+                <p>Price:Rs-1500</p>
+            </div>
+            <div class = "menu-item">
+                <img src = "Pizza.jpg" alt="Dish 2">
+                <h3>Pizza</h3>
+                <p>It is a dish that is made with a flatbread, typically made from wheat
+                    and water, and then cooked in a wood fire oven.</p>
+                    <p>Price: Rs-1200</p>
+            </div>
+            <div class = "menu-item">
+                <img src = "Sushi.jpg" alt="Dish 3">
+                <h3>Sushi</h3>
+                <p>It is a dish that is made with vinegared rice and various toppings,
+                    such as raw fish, vegetables, and egg.</p>
+                    <p>Price: Rs-560</p>
+            </div>
+            <div class = "menu-item">
+                <img src = "Burger.jpg" alt="Dish 4">
+                <h3>Burger</h3>
+                <p>It is a dish that is made with a cooked patty of ground meat,
+                    typically chicken, and served on a bun with various toppings.</p>
+                    <p>Price: Rs-250</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation page-->
+    <section class="Reservation">
+        <h2>Reservation</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <br>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>

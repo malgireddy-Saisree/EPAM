@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: #bd899b;
+        }
+        .image-container {
+            position: absolute;
+            right: 3%;
+            width: 200px;
+            height: 400px;
+            overflow:hidden;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(114, 14, 14, 0.927);
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .image-container {
+                left: 5%;
+                bottom: 10%;
+            }
+        }
+        .container{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            border: 5px snow;
+            background-color: #f0f0f0;
+            box-shadow: #f0aac2;
+            justify-content: space-around;
+            padding: 15px 0;
+        }
+        .item{
+            /* display: flex; */
+            /* flex-direction: column; */
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+            background-color:#bd899b;
+        }
+        .item:hover{
+            background-color: #f0f0f0;
+        }
+        .categories-container {
+                position: relative;
+                top: 20%;
+                left: 5%;
+                display: grid;
+                /* grid-template-columns: repeat(3,1fr); */
+                gap: 30px;
+                padding: 20px;
+            }
+            .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            }
+            .category-image {
+                width: 100px;
+                height: 150px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 15px;
+                border: 3px solid white;
+                box-shadow: 0 4px 8px rosybrown;
+            }
+            .category-image:hover{
+                transform: scale(1.05);
+            }
+            .category-image img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .category-name{
+                color: aliceblue;
+                font-size: 18px;
+                font-weight: bold;
+                text-shadow: #f0f0f0;
+            }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="dress1.jpg" class="slider-image" style="opacity: 1;">
+        <img src="dress2.jpg" class="slider-image" style="opacity: 0;">
+        <img src="dress3.jpg" class="slider-image" style="opacity: 0;">
+    </div>
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.slider-image');
+        setInterval(() => {
+            images[index].style.opacity = 0;
+            index = (index + 1) % images.length;
+            images[index].style.opacity = 1;
+        }, 3000);
+    </script>
+        <div class="container">
+            <div class="item">Home</div>
+            <div class="item">About</div>
+            <div class="item">Contact</div>
+            <div class="item">Login</div>
+        </div>
+        <div class="category-container">
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="men.jpg" alt="Men">
+                </div>
+                <span class="category-name">Men</span>
+            </div>
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="women.jpg" alt="Women">
+                    </div>
+                    <span class="category-name">Women</span>
+                </div>
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="kids.jpg" alt="Kids">
+                </div>
+                <span class="category-name">Kids</span>
+            </div>
+            <div class="category-item">
+                <div class="category-image">
+                    <img src="dress-material.jpg" alt="Dress-Material">
+                </div>
+                <span class="category-name">Dress-Material</span>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
